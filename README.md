@@ -1,13 +1,4 @@
----
-title: PurePix
-emoji: 🖼️
-colorFrom: purple
-colorTo: blue
-sdk: docker
-pinned: false
-license: mit
-app_port: 7860
----
+
 
 <div align="center">
   <img src="https://github.com/ArdaBolukbasi/purepix-web/raw/main/favicon.png" width="100" alt="PurePix Logo">
@@ -203,3 +194,4 @@ Developed by **Arda Bölükbaşı**
 Made with ❤️ using Next.js and FastAPI
 
 </div>
+
