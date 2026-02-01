@@ -9,173 +9,197 @@ license: mit
 app_port: 7860
 ---
 
-# PurePix
-> Squoosh.app inspired image compression tool with a modern, premium UI
 <div align="center">
-![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.128-009688?style=for-the-badge&logo=fastapi)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python)
+  <img src="https://github.com/ArdaBolukbasi/purepix-web/raw/main/favicon.png" width="100" alt="PurePix Logo">
+  <h1>PurePix Web</h1>
+  <p>
+    <strong>High-Performance SEO Landing & Presentation Layer for PurePix</strong>
+  </p>
 </div>
-## ✨ Features
-- 🎨 **Premium Dark UI** - Glassmorphism, gradient accents, neon glow effects
-- 🖼️ **Before/After Comparison** - Interactive slider to compare original vs compressed
-- ⚡ **Real-time Preview** - See changes as you adjust quality, size, and format
-- 📦 **Multiple Formats** - JPEG, PNG, WebP support
-- 🎯 **Precise Controls** - Fine-tune dimensions, quality, and aspect ratio
-- 🔒 **Privacy First** - Images processed on server but never stored
-- 📱 **Responsive Design** - Works on desktop and mobile
-- 🔍 **Zoom Controls** - Inspect image details at different zoom levels
-## 🚀 Quick Start
+
+<div align="center">
+### AI Powered Image Optimization & Background Removal
+
+**Squoosh.app inspired image compression tool with a modern, premium Dark UI.**
+</div>
+
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.128-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+ <a href="https:/pırepix.com.tr" target="_blank">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-Click_Here-success?style=for-the-badge" />
+  </a>
+
+<br>
+<div align="center">
+    <a href="https://purepix.com.tr" target="_blank">
+         <img src="https://github.com/ArdaBolukbasi/purepix-web/raw/main/mainpage.jpg" alt="PurePix Main Interface" width="50%" style="border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+   </a>
+</div>
+
+---
+
+## ✨ Overview
+
+**PurePix** is a high-performance image optimization tool designed for the modern web. Built with a robust **FastAPI** backend and a sleek **Next.js** frontend, it offers real-time image compression, resizing, and format conversion with a privacy-first approach.
+
+The interface features a **Glassmorphism** design language with neon accents, providing a premium user experience comparable to native desktop applications.
+
+---
+
+## 📸 Features in Action
+
+### 📉 Intelligent Compression
+Interactive slider to compare Original vs. Compressed versions in real-time. Full support for **JPEG**, **PNG**, and **WebP**.
+
+<div align="center">
+  <a href="https://purepix.com.tr" target="_blank">
+    <img src="https://github.com/ArdaBolukbasi/purepix-web/raw/main/compresspage.jpg" alt="Compression Interface" width="50%" style="border-radius: 8px; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+  </a>
+</div>
+
+<br>
+
+### ✂️ AI Background Removal
+Remove backgrounds instantly with AI precision and save as transparent PNGs.
+
+<div align="center">
+    <a href="https://purepix.com.tr" target="_blank">
+  <img src="https://github.com/ArdaBolukbasi/purepix-web/raw/main/reamovepage.jpg" alt="Background Removal Interface" width="50%" style="border-radius: 8px;">
+         </a>
+</div>
+
+---
+
+## 🚀 Key Features List
+
+* 🎨 **Premium Dark UI** - Glassmorphism aesthetics, gradient accents, and neon glow effects.
+* ⚡ **Instant Preview** - See changes immediately as you adjust quality, size, and formats.
+* 🎯 **Precise Controls** - Fine-tune dimensions, quality percentage, and maintain aspect ratio.
+* 🔒 **Privacy First** - Images are processed in memory and never stored on the server.
+* 📱 **Fully Responsive** - Flawless experience on both desktop workstations and mobile devices.
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend**
+| Tech | Description |
+| :--- | :--- |
+| **Next.js 16** | App Router & Server Components |
+| **TypeScript** | Type-safe development |
+| **Tailwind CSS v4** | Modern utility-first styling |
+| **Lucide React** | Beautiful & consistent icons |
+| **React Compare Slider** | Smooth before/after visualization |
+
+### **Backend**
+| Tech | Description |
+| :--- | :--- |
+| **FastAPI** | High-performance Python framework |
+| **Python 3.11+** | Core logic language |
+| **Pillow (PIL)** | Advanced image processing library |
+| **Uvicorn** | Lightning-fast ASGI server |
+
+---
+## 📡 API Reference
+PurePix exposes a RESTful API for image processing.
+
+### POST /process
+Process image with specific parameters.
+
+**Body: JSON**
+```json
+{
+  "image": "base64_string",
+  "quality": 80,
+  "format": "webp",
+  "width": 1920,
+  "height": 1080
+}
+```
+
+## 📁 Project Structure
+```plaintext
+purepix/
+├── frontend/                 # Next.js Application
+│   ├── src/
+│   │   ├── app/              # App Router Pages
+│   │   ├── components/       # UI Components
+│   │   └── lib/              # API Utils
+│   └── package.json
+│
+└── backend/                  # FastAPI Application
+    ├── main.py               # API Entry Point
+    ├── requirements.txt      # Python Dependencies
+    └── utils/
+        └── image_processor.py # Core Processing Logic
+```
+
+## 🤝 Contributing
+Contributions are always welcome! Please feel free to submit a Pull Request.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## ⚡ Quick Start
+
+Follow these steps to set up the project locally.
+
 ### Prerequisites
-- Node.js 18+ 
-- Python 3.11+
-- npm or yarn
+* **Node.js** v18 or higher
+* **Python** v3.11 or higher
+* **npm** or **yarn**
+
 ### Installation
-1. **Clone the repository**
-```bash
-git clone <your-repo-url>
-cd mb
-```
-2. **Setup Frontend**
-```bash
-cd frontend
-npm install
-```
-3. **Setup Backend**
-```bash
-cd backend
-pip install -r requirements.txt
-```
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/Ardabolukbasi/purepix.git
+    cd purepix
+    ```
+
+2.  **Setup Frontend**
+    ```bash
+    cd frontend
+    npm install
+    ```
+
+3.  **Setup Backend**
+    ```bash
+    cd ../backend
+    pip install -r requirements.txt
+    ```
 ### Running the Application
-**Terminal 1 - Start Backend:**
+
+You need to run both the backend and frontend terminals simultaneously.
+
+**Terminal 1 - Backend:**
 ```bash
 cd backend
 python main.py
+# Server runs on: http://localhost:8000
 ```
-Backend runs on: `http://localhost:8000`
-**Terminal 2 - Start Frontend:**
+
+**Terminal 2 - Frontend:**
 ```bash
 cd frontend
 npm run dev
+# App runs on: http://localhost:3000
 ```
-Frontend runs on: `http://localhost:3000`
-### Usage
-1. Open `http://localhost:3000` in your browser
-2. Upload an image (drag & drop or click to browse)
-3. Adjust compression settings:
-   - **Resize**: Change dimensions with aspect ratio lock
-   - **Format**: Choose between JPEG, PNG, or WebP
-   - **Quality**: Slide between 1-100%
-4. Compare original vs compressed using the slider
-5. Download your optimized image
-## 🛠️ Tech Stack
-### Frontend
-- **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS v4
-- **UI Components**: Custom-built with 21st.dev design patterns
-- **Comparison**: react-compare-slider
-- **Icons**: Lucide React
-### Backend
-- **Framework**: FastAPI
-- **Language**: Python 3.11+
-- **Image Processing**: Pillow (PIL)
-- **Server**: Uvicorn with hot reload
-## 📁 Project Structure
-```
-mb/
-├── frontend/
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── page.tsx           # Main page
-│   │   │   ├── layout.tsx         # Root layout
-│   │   │   └── globals.css        # Global styles
-│   │   ├── components/
-│   │   │   ├── upload-zone.tsx    # Drag & drop upload
-│   │   │   ├── image-editor.tsx   # Main editor
-│   │   │   ├── comparison-slider.tsx
-│   │   │   ├── stats-card.tsx
-│   │   │   ├── resize-controls.tsx
-│   │   │   ├── format-selector.tsx
-│   │   │   ├── quality-slider.tsx
-│   │   │   └── download-button.tsx
-│   │   └── lib/
-│   │       ├── utils.ts           # Utilities
-│   │       └── api.ts             # API client
-│   └── package.json
-│
-└── backend/
-    ├── main.py                    # FastAPI app
-    ├── requirements.txt           # Dependencies
-    └── utils/
-        └── image_processor.py     # Image processing logic
-```
-## 🎨 Design Highlights
-- **Dark Theme**: Modern dark color palette with carefully selected accent colors
-- **Glassmorphism**: Semi-transparent cards with backdrop blur
-- **Neon Accents**: Gradient borders and glow effects on interactive elements
-- **Smooth Animations**: Slide-up, fade, and pulse animations
-- **Custom Components**: Tailored sliders, buttons, and controls
-- **Responsive Layout**: Adapts seamlessly from mobile to desktop
-## 📡 API Endpoints
-### `POST /upload`
-Upload an image and get metadata
-- **Max Size**: 10MB
-- **Returns**: Base64 image + dimensions, format, size
-### `POST /process`
-Process image with specified parameters
-- **Parameters**: width, height, format, quality, keep_aspect_ratio
-- **Returns**: Base64 processed image + metadata
-### `POST /download`
-Download processed image as file
-- **Parameters**: Same as `/process`
-- **Returns**: Binary image file with appropriate content-type
-### `GET /`
-Health check endpoint
-## 🔧 Development
-### Frontend Development
-```bash
-cd frontend
-npm run dev      # Start dev server
-npm run build    # Build for production
-npm run lint     # Run ESLint
-```
-### Backend Development
-```bash
-cd backend
-python main.py              # Start with hot reload
-uvicorn main:app --reload  # Alternative start method
-```
-## 🐛 Troubleshooting
-### Port Already in Use
-- **Frontend (3000)**: Change port in `package.json` dev script: `next dev -p 3001`
-- **Backend (8000)**: Change port in `main.py`: `uvicorn.run("main:app", port=8001)`
-### CORS Issues
-If you change the frontend port, update CORS settings in `backend/main.py`:
-```python
-allow_origins=["http://localhost:YOUR_PORT"]
-```
-### Image Not Updating
-- Clear browser cache
-- Check browser console for errors
-- Verify both servers are running
-## 🌟 Future Enhancements
-- [ ] Batch processing (multiple images)
-- [ ] Image format conversion without compression
-- [ ] Save/load compression presets
-- [ ] History of processed images
-- [ ] AVIF and JPEG XL support
-- [ ] PWA support for offline usage
-- [ ] WebSocket for real-time updates
-- [ ] Mobile app (React Native)
-## 📝 License
-This project is open source and available under the MIT License.
-## 🙏 Acknowledgments
-- Inspired by [Squoosh](https://squoosh.app/) by Google Chrome Labs
-- UI design patterns from [21st.dev](https://21st.dev)
-- Icons by [Lucide](https://lucide.dev)
----
+
+
 <div align="center">
+
+Developed by **Arda Bölükbaşı**
+
 Made with ❤️ using Next.js and FastAPI
+
 </div>
